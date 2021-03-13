@@ -16,16 +16,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-export { default as EchartsBoxPlotChartPlugin } from './BoxPlot';
-export { default as EchartsTimeseriesChartPlugin } from './Timeseries';
-export { default as EchartsPieChartPlugin } from './Pie';
-export { default as EchartsGraphChartPlugin } from './Graph';
-export { default as EchartsFunnelChartPlugin } from './Funnel';
+import buildQuery from '../../src/Funnel/buildQuery';
 
-/**
- * Note: this file exports the default export from EchartsTimeseries.tsx.
- * If you want to export multiple visualization modules, you will need to
- * either add additional plugin folders (similar in structure to ./plugin)
- * OR export multiple instances of `ChartPlugin` extensions in ./plugin/index.ts
- * which in turn load exports from EchartsTimeseries.tsx
- */
+describe('Funnel buildQuery', () => {
+  const formData = {
+    datasource: '5__table',
+    granularity_sqla: 'ds',
+    metric: 'foo',
+    groupby: ['bar'],
+    viz_type: 'my_chart',
+  };
+
+  it('should build query fields from form data', () => {
+    const queryContext = buildQuery(formData);
+    const [query] = queryContext.queries;
+    expect(query.metrics).toEqual(['foo']);
+    expect(query.columns).toEqual(['bar']);
+  });
+});
