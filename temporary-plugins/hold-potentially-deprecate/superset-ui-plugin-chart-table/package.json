@@ -31,7 +31,7 @@
     "@superset-ui/core": "^0.14.22",
     "@superset-ui/chart-controls": "^0.14.22",
     "@types/dompurify": "^2.0.0",
-    "dompurify": "^2.0.6",
+    "dompurify": "^3.2.4",
     "reselect": "^4.0.0"
   },
   "peerDependencies": {
