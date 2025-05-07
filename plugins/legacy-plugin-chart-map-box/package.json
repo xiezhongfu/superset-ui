@@ -33,9 +33,9 @@
     "immutable": "^3.8.2",
     "mapbox-gl": "^0.53.0",
     "prop-types": "^15.6.2",
-    "react-map-gl": "^4.0.10",
+    "react-map-gl": "^7.0.1",
     "supercluster": "^4.1.1",
-    "viewport-mercator-project": "^6.1.1"
+    "viewport-mercator-project": "^7.0.4"
   },
   "peerDependencies": {
     "react": "^15 || ^16"
