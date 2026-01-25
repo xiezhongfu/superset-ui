@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@superset-ui/core": "0.17.48",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.23",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
